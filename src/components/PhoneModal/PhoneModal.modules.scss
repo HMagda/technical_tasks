@@ -1,0 +1,14 @@
+.modal-container {
+  .flag-container {
+    border-radius: 2px;
+    border: 1px solid var(--grayscale-gray-4, #e4e4eb);
+    width: 24px;
+    height: 18px;
+
+    .flag-img {
+      width: 22px;
+      height: 16px;
+      border-radius: 1px;
+    }
+  }
+}
