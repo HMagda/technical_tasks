@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import PhoneModal from './components/PhoneModal/PhoneModal';
 import './App.scss';
 
@@ -56,10 +56,19 @@ const TEST_1 = typedFreeze({
 //   key5:  {},
 // } as const);
 
-const App = () => {
+const App: React.FC = () => {
+  const [modalIsOpen, setModalIsOpen] = useState<boolean>(true);
+
+  const openModal = useCallback(() => setModalIsOpen(true), []);
+
   return (
     <div className='App'>
-      <PhoneModal />
+      {!modalIsOpen && (
+        <button className='primaryBtn' onClick={openModal}>
+          Open Modal
+        </button>
+      )}
+      {modalIsOpen && <PhoneModal setModalIsOpen={setModalIsOpen} />}
     </div>
   );
 };

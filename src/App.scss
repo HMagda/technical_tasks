@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
 html {
   height: 100%;
 
@@ -17,5 +21,30 @@ html {
 
 .App {
   height: 100%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   background: #9c9c9c;
+
+  .primaryBtn {
+    display: flex;
+    width: max-content;
+    height: 32px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 20px;
+    border: 1px solid #5870e0;
+    background: #fff;
+    color: #28293d;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

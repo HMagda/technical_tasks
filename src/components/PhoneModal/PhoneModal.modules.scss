@@ -1,14 +1,231 @@
-.modal-container {
-  .flag-container {
-    border-radius: 2px;
-    border: 1px solid var(--grayscale-gray-4, #e4e4eb);
-    width: 24px;
-    height: 18px;
+.modal-wrapper {
+  overflow: hidden;
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 300px;
+  border-radius: 12px;
+  background: #fff;
 
-    .flag-img {
-      width: 22px;
-      height: 16px;
-      border-radius: 1px;
+  .modal-container {
+    h1 {
+      color: #28293d;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px;
+    }
+
+    h2 {
+      margin: 16px 0 2px 8px;
+      color: #555770;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    .phone-input-wrapper {
+      display: flex;
+
+      .select-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 106px;
+        height: 40px;
+        margin-right: 10px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #c7c9d9;
+        background: #fff;
+
+        .flag-container {
+          display: flex;
+          align-items: center;
+
+          img {
+            border-radius: 2px;
+          }
+        }
+
+        .dial-code {
+          margin: 6px 0;
+          width: 36px;
+          height: 24px;
+          color: #555770;
+          text-align: center;
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .phone-input-container {
+        width: 400px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 1px solid #c7c9d9;
+
+        .phone-input {
+          color: #8f90a6;
+          font-size: 14px;
+          line-height: 24px;
+          outline: none;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 24px;
+
+  .btn {
+    display: flex;
+    width: 116px;
+    height: 32px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .cancel {
+    padding: 7.5px 32px 7.5px 33px;
+    border: 1px solid #5870e0;
+    background: #fff;
+    color: #28293d;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .save {
+    margin-left: 16px;
+    padding: 7.5px 40px 7.5px 41px;
+    background: #5870e0;
+    color: #fff;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin-top: 4px;
+  max-height: 260px;
+  align-items: center;
+  border-radius: 6px;
+  background: #fff;
+  border: 1px solid #e4e4eb;
+  box-shadow: 0px 6px 16px 0px rgba(5, 3, 88, 0.02),
+    0px 8px 36px 0px rgba(7, 4, 102, 0.03),
+    0px 4px 100px 0px rgba(7, 4, 112, 0.02),
+    0px 6px 100px 0px rgba(7, 4, 85, 0.01);
+
+  .search {
+    position: relative;
+    display: flex;
+    height: 40px;
+    width: 250px;
+    padding: 8px 12px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid #e4e4eb;
+
+    input {
+      width: 100%;
+      margin-left: 8px;
+      color: #8f90a6;
+      font-size: 14px;
+      line-height: 24px;
+      border: none;
+      outline: none;
+    }
+  }
+
+  .options {
+    display: flex;
+    padding: 6px;
+    margin: 6px 2px 6px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 220px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      padding: 8px 12px;
+      align-self: stretch;
+      cursor: pointer;
+      color: #555770;
+
+      .country-option {
+        display: flex;
+        align-items: center;
+
+        .flag-container {
+          display: flex;
+          align-items: center;
+          img {
+            border-radius: 2px;
+          }
+        }
+        .country-name {
+          margin: 0 6px 0 12px;
+        }
+      }
+
+      .country-code {
+        font-weight: 500;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 124px;
+      background-color: #c7c9d9;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      background-clip: content-box;
+
+      &:hover {
+        background-color: #70727b;
+      }
     }
   }
 }
