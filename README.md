@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 a. The modal with the phone selection implemented.
 b. **Numverify API** - open api used.
 c. The country code select:
